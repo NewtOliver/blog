@@ -6,6 +6,7 @@ def index(request):
     pictures = Picture.objects
     return render(request, 'index.html', {'pictures': pictures})
 
+
 def about(request):
     return render(request, 'about.html')
 

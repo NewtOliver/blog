@@ -3,7 +3,7 @@
 	{% load  staticfiles%}
 	<head>
 		{% load  staticfiles%}
-		<title>Index</title>
+		<title>Golor</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
@@ -21,7 +21,8 @@
 		><!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<![endif]-->
-
+		<!--bootstrap css-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 	<body>
@@ -36,7 +37,7 @@
 			<header class="header header--fixed">
 				<div class="header__inner">
 					<div class="header__logo">
-						<a href="#"><img src="{% static 'img/logo.png' %}" alt="LOGO" style="width: 122px;"></a>
+						<a href="../../index/"><img src="{% static 'img/logo.png' %}" alt="LOGO" style="width: 122px;"></a>
 					</div>
 					<div class="navbar-toggle" id="fs-button">
 						<div class="navbar-icon"><span></span></div>
@@ -51,19 +52,19 @@
 
 						<!--  -->
 						<ul class="wil-menu-list">
-							<li class="current-menu-item"><a href="../../index/">主页</a>
+							<li class="current-menu-item"><a href="{% url '主页' %}">主页</a>
 							</li>
-							<li><a href="../../about/">关于</a>
+							<li><a href="{% url '关于' %}">关于</a>
 							</li>
-							<li><a href="../../blog/">博客</a>
+							<li><a href="{% url '博客' %}">博客</a>
 							</li>
-							<li ><a href="../../pictures/">图集</a>
+							<li ><a href="{% url '图集' %}">图集</a>
 							</li>
-							<li><a href="../..contact/">联系</a>
+							<li><a href="{% url '联系' %}">联系</a>
 							</li>
-							<li><a href="#">登陆</a>
+							<li><a href="{% url '登陆' %}">登陆</a>
 							</li>
-							<li><a href="#">注册</a>
+							<li><a href="{% url '注册' %}">注册</a>
 						</ul><!--  -->
 
 					</nav><!-- End / overlay-menu -->
@@ -114,5 +115,9 @@
 		<!--canvas-nest cdn-->
 		<script type="text/javascript" color="0,0,0" opacity='1' zIndex="5" count="150" src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js"></script>
 		<script src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script>
+		<!--bootstrap js-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</body>
 </html>

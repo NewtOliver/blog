@@ -41,12 +41,10 @@ INSTALLED_APPS = [
     # 我的模块
     'blog_app.apps.BlogAppConfig',
     'picture_app.apps.PictureAppConfig',
+    'account_app.apps.AccountAppConfig',
     # django-ckeditor
     'ckeditor',
     'ckeditor_uploader',
-    # django-comments
-    'django_comments',
-    'django.contrib.sites',
 ]
 SITE_ID = 1
 
