@@ -1,76 +1,8 @@
 <!DOCTYPE html>
-<html>
-	{% load  staticfiles%}
-	<head>
-		{% load  staticfiles%}
-		<title>Index</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<!-- Fonts-->
-		<link rel="stylesheet" type="text/css" href="{% static '/fonts/fontawesome/font-awesome.min.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static '/fonts/pe-icon/pe-icon.css' %}">
-		<!-- Vendors-->
-		<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/grid.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static '/vendors/magnific-popup/magnific-popup.min.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static '/vendors/swiper/swiper.css' %}">
-		<!-- App & fonts-->
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,700">
-		<link rel="stylesheet" type="text/css" id="app-stylesheet" href="{% static '/css/main.css' %}"
-		><!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<![endif]-->
-
-
-
-	<body>
-
-	</head>
-
-		<div class="page-wrap" id="root">
-
-
-
-			<!-- header -->
-			<header class="header header--fixed">
-				<div class="header__inner">
-					<div class="header__logo">
-						<a href="#"><img src="{% static 'img/logo.png' %}" alt="LOGO" style="width: 122px;"></a>
-					</div>
-					<div class="navbar-toggle" id="fs-button">
-						<div class="navbar-icon"><span></span></div>
-					</div>
-				</div>
-
-				<!-- fullscreenmenu__module -->
-				<div class="fullscreenmenu__module" trigger="#fs-button">
-
-					<!-- overlay-menu -->
-					<nav class="overlay-menu">
-
-						<!--  -->
-						<ul class="wil-menu-list">
-							<li class="current-menu-item"><a href="#">主页</a>
-							</li>
-							<li><a href="about/">关于</a>
-							</li>
-							<li><a href="blog/">博客</a>
-							</li>
-							<li ><a href="../pictures/">图集</a>
-							</li>
-							<li><a href="contact/">联系</a>
-							</li>
-						</ul><!--  -->
-
-					</nav><!-- End / overlay-menu -->
-
-				</div><!-- End / fullscreenmenu__module -->
-
-			</header><!-- End / header -->
-
-			<!-- Content-->
-			<div class="wil-content">
+{% extends "theme.html"%}
+{% block content %}
+<!-- Content-->
+<div class="wil-content">
 
 				<!-- Section -->
 				<section class="awe-section">
@@ -159,46 +91,5 @@
 				<!-- End / Section -->
 
 			</div>
-			<!-- End / Content-->
-
-			<!-- footer -->
-			<div class="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-lg-6 ">
-						</div>
-						<div class="col-md-6 col-lg-6 ">
-							<div class="footer__social">
-								<!-- social-icon -->
-								<a class="social-icon" href="tencent://message/?uin=1045132383&Site=&Menu=yes"><i class="social-icon__icon fa fa-qq"></i>
-								</a><!-- End / social-icon -->
-								<!-- social-icon -->
-								<a class="social-icon" href="#"><i class="social-icon__icon fa">top</i>
-								</a><!-- End / social-icon -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- End / footer -->
-		</div>
-
-		<!-- Vendors-->
-		<script type="text/javascript" src="{% static '/vendors/jquery/jquery.min.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/imagesloaded/imagesloaded.pkgd.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/isotope-layout/isotope.pkgd.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/jquery-one-page/jquery.nav.min.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/jquery.easing/jquery.easing.min.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/jquery.matchHeight/jquery.matchHeight.min.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/masonry-layout/masonry.pkgd.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/jquery.waypoints/jquery.waypoints.min.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/swiper/swiper.jquery.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/menu/menu.js' %}"></script>
-		<script type="text/javascript" src="{% static '/vendors/typed/typed.min.js' %}"></script>
-		<!-- App-->
-		<script type="text/javascript" src="{% static '/js/main.js' %}"></script>
-		<!--canvas-nest cdn-->
-		<script type="text/javascript" color="0,0,0" opacity='1' zIndex="5" count="150" src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js"></script>
-		<script src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script>
-	</body>
-</html>
+<!-- End / Content-->
+{% endblock content %}
