@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends "theme.html"%}
+{% block content %}
+<!-- Content-->
+<div class="wil-content">
+
+	<!-- Section -->
+	<section class="awe-section">
+		<div class="container">
+
+			<!-- page-title -->
+			<div class="page-title pb-40">
+				<span class="post-detail__cat"></span>
+				<h2 class="page-title__title">{{blog.title}}</h2>
+				<div class="post-detail__meta"><span class="date">{{blog.date}}</span><span class="author"><a href="#">by {{blog.author}}</a></span></div>
+				<div class="page-title__divider"></div>
+			</div><!-- End / page-title -->
+
+		</div>
+	</section>
+	<!-- End / Section -->
+
+
+	<!-- Section -->
+	<section class="awe-section bg-gray">
+		<div class="container">
+
+			<!--  -->
+			<div>
+				<div class="post-detail__media"><img src="{{blog.image.url}}" alt=""/></div>
+				<div class="post-detail__entry row">
+					<div class="col-md-8">
+						{% autoescape off %}
+						{{blog.content}}
+						{% endautoescape %}
+					</div>
+				</div>
+				<!--<div class="sharebox__module">-->
+					<!--<p class="social-text">share this article</p>-->
+					<!---->
+					<!--&lt;!&ndash; social-icon &ndash;&gt;-->
+					<!--<a class="social-icon" href="#"><i class="social-icon__icon fa fa-facebook"></i>-->
+					<!--</a>&lt;!&ndash; End / social-icon &ndash;&gt;-->
+					<!---->
+					<!---->
+					<!--&lt;!&ndash; social-icon &ndash;&gt;-->
+					<!--<a class="social-icon" href="#"><i class="social-icon__icon fa fa-twitter"></i>-->
+					<!--</a>&lt;!&ndash; End / social-icon &ndash;&gt;-->
+					<!---->
+					<!---->
+					<!--&lt;!&ndash; social-icon &ndash;&gt;-->
+					<!--<a class="social-icon" href="#"><i class="social-icon__icon fa fa-linkedin"></i>-->
+					<!--</a>&lt;!&ndash; End / social-icon &ndash;&gt;-->
+					<!---->
+					<!---->
+					<!--&lt;!&ndash; social-icon &ndash;&gt;-->
+					<!--<a class="social-icon" href="#"><i class="social-icon__icon fa fa-behance"></i>-->
+					<!--</a>&lt;!&ndash; End / social-icon &ndash;&gt;-->
+					<!---->
+					<!---->
+					<!--&lt;!&ndash; social-icon &ndash;&gt;-->
+					<!--<a class="social-icon" href="#"><i class="social-icon__icon fa fa-vimeo"></i>-->
+					<!--</a>&lt;!&ndash; End / social-icon &ndash;&gt;-->
+					<!---->
+				<!--</div>-->
+			</div><!-- End /  -->
+
+			<div class="awe-text-center mt-50">
+				<a class="md-btn md-btn--outline-primary " href="../">BACK TO  BLOG</a>
+			</div>
+		</div>
+	</section>
+	<!-- End / Section -->
+
+</div>
+<!-- End / Content-->
+{% endblock content %}
+
