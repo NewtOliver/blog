@@ -37,7 +37,7 @@
 			<header class="header header--fixed">
 				<div class="header__inner">
 					<div class="header__logo">
-						<a href="../../index/"><img src="{% static 'img/logo.png' %}" alt="LOGO" style="width: 122px;"></a>
+						<a href="{% url 'index'%}"><img src="{% static 'img/logo.png' %}" alt="LOGO" style="width: 122px;"></a>
 					</div>
 					<div class="navbar-toggle" id="fs-button">
 						<div class="navbar-icon"><span></span></div>
@@ -52,19 +52,31 @@
 
 						<!--  -->
 						<ul class="wil-menu-list">
-							<li class="current-menu-item"><a href="{% url '主页' %}">主页</a>
+							<li class="current-menu-item"><a href="{% url 'index' %}">主页</a>
 							</li>
-							<li><a href="{% url '关于' %}">关于</a>
+							<li><a href="{% url 'about' %}">关于</a>
 							</li>
-							<li><a href="{% url '博客' %}">博客</a>
+							<li><a href="{% url 'blog' %}">博客</a>
 							</li>
-							<li ><a href="{% url '图集' %}">图集</a>
+							<li ><a href="{% url 'pictures' %}">图集</a>
 							</li>
-							<li><a href="{% url '联系' %}">联系</a>
+							<li><a href="{% url 'contact' %}">联系</a>
 							</li>
-							<li><a href="{% url '登陆' %}">登陆</a>
+
+							{% if user.is_authenticated %}
+							<li><a href="Javascript:{document.getElementById('退出').submit()}">退出</a>
 							</li>
-							<li><a href="{% url '注册' %}">注册</a>
+							<form id="退出" method="POST" action="{% url 'logout' %}">
+								{% csrf_token %}
+								<input type="hidden">
+							</form>
+							{% else %}
+								<li><a href="{% url 'signin' %}">登陆</a>
+								</li>
+								<li><a href="{% url 'signup' %}">注册</a>
+								</li>
+							{% endif %}
+
 						</ul><!--  -->
 
 					</nav><!-- End / overlay-menu -->
@@ -86,9 +98,6 @@
 							<div class="footer__social">
 								<!-- social-icon -->
 								<a class="social-icon" href="tencent://message/?uin=1045132383&Site=&Menu=yes"><i class="social-icon__icon fa fa-qq"></i>
-								</a><!-- End / social-icon -->
-								<!-- social-icon -->
-								<a class="social-icon" href="#"><i class="social-icon__icon fa">top</i>
 								</a><!-- End / social-icon -->
 							</div>
 						</div>

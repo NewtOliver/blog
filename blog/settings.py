@@ -155,8 +155,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ckditor图片存储位置
 CKEDITOR_UPLOAD_PATH = "editor_images"
 
-# cdeditor配置
 
+LOGIN_REDIRECT_URL = 'index/'
+# cdeditor配置
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': (

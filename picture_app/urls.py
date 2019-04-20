@@ -3,7 +3,7 @@ import picture_app.views as views
 
 urlpatterns = [
 
-    path('', views.pictures, name='图集'),
+    path('', views.pictures, name='pictures'),
     path('<int:picture_id>/', views.picture_detail),
 
 ]

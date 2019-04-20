@@ -22,15 +22,15 @@ from . import views
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='主页'),
-    path('', views.index, name='主页'),
+    path('index/', views.index, name='index'),
+    path('', views.index, name='index'),
 
     path('blog/', include('blog_app.urls')),
 
     path('pictures/', include('picture_app.urls')),
 
-    path('about/', views.about, name='关于'),
-    path('contact/', views.contact, name='联系'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
 
     path('account/', include('account_app.urls')),
 
